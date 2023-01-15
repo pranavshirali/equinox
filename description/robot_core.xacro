@@ -21,14 +21,14 @@
 	
 	
 	
-	<!--BASE LINK-->
+<!--BASE LINK-->
 	
 	<link name="base_link">
 	
 	
 	</link>
 	
-	<!--CHASSIS LINK-->
+<!--CHASSIS LINK-->
 	
 	
 	<joint name="chassis_joint" type="fixed">
@@ -59,7 +59,8 @@
 		<material>Gazebo/White</material>
 	</gazebo>
 	
-	<!--LEFT WHEEL LINK--> 
+
+<!--LEFT WHEEL LINK--> 
 	
 	<joint name="left_wheel_joint" type="continuous">
 		<parent link="base_link"/>
@@ -88,7 +89,8 @@
 		<material>Gazebo/Blue</material>
 	</gazebo>
 
-	<!--RIGHT WHEEL LINK-->
+
+<!--RIGHT WHEEL LINK-->
 	
 	<joint name="right_wheel_joint" type="continuous">
 		<parent link="base_link"/>
@@ -118,7 +120,7 @@
 	</gazebo>
 
 
-	<!--CASTER WHEEL LINK -->
+<!--CASTER WHEEL LINK -->
 	<joint name="caster_wheel_joint" type="fixed">
 		<parent link="chassis"/>
 		<child link="caster_wheel"/>
@@ -143,6 +145,8 @@
 	</link>
 	<gazebo reference="caster_wheel">
 		<material>Gazebo/Black</material>
+		<mu1 value="0.001"/>
+		<mu2 value="0.001"/>
 	</gazebo>  
 	
 </robot> 
